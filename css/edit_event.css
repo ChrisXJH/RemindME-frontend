@@ -1,0 +1,50 @@
+.edit-event{
+	transition: 0.5s;
+	display: none;
+}
+
+.show-edit-event .edit-event{
+	transition: 0.5s;
+	display: inline-block;
+}
+
+.show-edit-event .event-content{
+	transition: 0.5s;
+	display: none;
+}
+
+.caption_2{
+	font-size: 14px;
+	line-height: 20px;
+	margin-top: 4px;
+}
+
+.input_2{
+	outline: none;
+	padding: 3px 6px;
+	font-size: 14px;
+	color: #666;
+	border: 1px solid #d7d7d7;
+	border-radius: 2px; 
+}
+
+.button_2{
+	padding: 6px 0;
+	color: #eee;
+	border: none;
+	border-radius: 2px;
+}
+
+.save-btn{
+	background-color: #2176AE;
+	margin-top: 6px;
+	margin-left: 4px;
+	width: 76px;
+}
+
+.cancle-btn{
+	background-color: #E54B4B;
+	margin-top: 6px;
+	margin-left: 4px;
+	width: 76px;
+}

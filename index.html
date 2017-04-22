@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="An events reminder app">
+	<meta name="keywords" content="NoticeMe, events, reminder, events reminder, reminde me">
+  	<meta name="author" content="Jianhao Xu">
+	<title>NoticeMe - Jianhao Xu</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/edit_event.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0\css\font-awesome.css"/>
+	
+</head>
+<body>
+<div class="main-container">
+
+<!-- SIDE BAR -->
+	<div id="sidebar" class="sidebar">
+	<div class="clearfix"></div>
+		<div id="profile" class="container_center clearselect">
+			<div class="profile-wrapper">
+				<img src="./img/profile.jpg">
+				<div class="profile-info">
+				<h2>Jianhao Xu</h2>
+				<div class="profile-icons">
+					<span class="fa fa-user profile-icon"></span>
+					<span class="fa fa-bell profile-icon"></span>
+					<span class="fa fa-cog profile-icon"></span>
+				</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<div id="side-menu">
+			<p class="caption_1">Categories</p>
+			<div class="sideMenu_1">
+				<ul class="slide-content">
+					<li class="listItem_1"><p class="first-letter">A</p><p class="ending">ll</p><span class="category fa fa-times"></span></li>
+					<li class="listItem_1"><p class="first-letter">E</p><p class="ending">vents</p><span class="fa fa-times"></span></li>
+					<li class="listItem_1 selected"><p class="first-letter">A</p><p class="ending">ssignments</p><span class="fa fa-times"></span></li>
+					<li class="listItem_1"><p class="first-letter">L</p><p class="ending">ectures</p><span class="fa fa-times"></span></li>
+					<li class="listItem_1"><p class="first-letter">P</p><p class="ending">arties</p><span class="fa fa-times"></span></li>
+					<li class="listItem_1"><p class="first-letter">M</p><p class="ending">eetings</p><span class="fa fa-times"></span></li>
+					<li class="listItem_1"><p class="first-letter">L</p><p class="ending">ectures</p><span class="fa fa-times"></span></li>
+					<li class="listItem_1"><p class="first-letter">P</p><p class="ending">arties</p><span class="fa fa-times"></span></li>
+					<li class="listItem_1"><p class="first-letter">M</p><p class="ending">eetings</p><span class="fa fa-times"></span></li>
+					<li class="listItem_1"><p class="first-letter">L</p><p class="ending">ectures</p><span class="fa fa-times"></span></li>
+					<li class="listItem_1"><p class="first-letter">P</p><p class="ending">arties</p><span class="fa fa-times"></span></li>
+					<li class="listItem_1"><p class="first-letter">M</p><p class="ending">eetings</p><span class="fa fa-times"></span></li>
+					<li class="listItem_1"><p class="first-letter">O</p><p class="ending">ther</p><span class="fa fa-times"></span></li>
+				</ul>
+				<div class="scrollbar_1 clearselect">
+					<span class="scroll_1 clearselect"></span>
+				</div>
+			</div>
+			
+		</div>
+
+		
+			<!--<div class="btn_1 clearselect">About</div>-->
+		
+	</div>
+
+
+<!-- MAIN PAGE -->
+	<div id="mainpage" class="mainpage-wrapper clearselect">
+		<nav>
+			<ul class="nav_1">
+			<li>
+			<div class="collapse-btn">
+				<span class="fa fa-angle-double-left"></span>
+			</div>
+			</li>
+				<li id="branding" class="clearselect"><h1><a href="index.html">Overview</a></h1></li>
+				<li>
+				<div id="searchbox">
+					<form>
+							<span class="fa fa-search"></span>
+							<input type="text" name="" placeholder="Search...">
+					</form>
+				</div>
+				</li>
+				<li class="clearfix"></li>
+			</ul>
+		</nav>
+
+
+
+	<div class="event-cards-wrapper">
+		<div class="container_1">
+		<ul class="cards-list">
+
+		<li class="event-card add-event">
+		<!-- EDIT EVENT -->
+			<div class="edit-event">
+					<div class="edit-form-wrapper">
+						<form class="ajax_1" method="post" action="./ajax/update_event.php">
+							<p class="caption_2">Event</p>
+							<input class="input_2" class="input_" type="text" name="event">
+							<br>
+							<p class="caption_2">Category</p>
+							<input class="input_2" class="input_" type="text" name="category">
+							<br>
+							<p class="caption_2">Date</p>
+							<input class="input_2" type="date" name="date">
+							<br>
+							<p class="caption_2">Time</p>
+							<input class="input_2" type="time" name="time">
+							<br>
+							<p class="caption_2">Location</p>
+							<input class="input_2" type="text" name="location">
+							<br>
+							<p class="caption_2">Period</p>
+							<select class="input_2" name="period">
+								<option>Daily</option>
+								<option>Weekly</option>
+								<option>Monthly</option>
+								<option>Customize</option>
+							</select>
+							<br>
+							<p class="caption_2">Description</p>
+							<textarea class="input_2" name="description"></textarea>
+							<br>
+							<input type="submit" class="save-btn button_2" value="Save">
+							<input type="button" class="cancle-btn button_2" value="Cancle">
+							</form>
+							
+						
+					</div>
+				</div>
+
+				<div class="event-content clearselect ">
+					<span class="add-btn fa fa-plus"></span>
+				</div>
+			</li>
+
+		<!--  -->
+			<li class="event-card">
+			<!-- EDIT EVENT -->
+			<div class="edit-event">
+					<div class="edit-form-wrapper">
+						<form>
+							<p class="caption_2">Event</p>
+							<input class="input_2" class="input_" type="text" name="event">
+							<br>
+							<p class="caption_2">Category</p>
+							<input class="input_2" class="input_" type="text" name="category">
+							<br>
+							<p class="caption_2">Date</p>
+							<input class="input_2" type="date" name="date">
+							<br>
+							<p class="caption_2">Time</p>
+							<input class="input_2" type="time" name="time">
+							<br>
+							<p class="caption_2">Location</p>
+							<input class="input_2" type="text" name="location">
+							<br>
+							<p class="caption_2">Period</p>
+							<select class="input_2" name="period">
+								<option>Daily</option>
+								<option>Weekly</option>
+								<option>Monthly</option>
+								<option>Customize</option>
+							</select>
+							<br>
+							<p class="caption_2">Description</p>
+							<textarea class="input_2" name="description"></textarea>
+							<br>
+							
+							</form>
+							<button class="save-btn button_2">Save</button>
+							<button class="cancle-btn button_2">Cancle</button>
+
+					</div>
+				</div>
+
+			<!-- EVENT CONTENT -->
+			<div class="event-content">
+				<div class="event-content clearselect">
+					<h2>Febuary 24, 2017</h2>
+					<h3>Assignment 1 due</h3>
+					
+					<p>MC 2066</p>
+				</div>
+				<div class="event-operation clearselect">
+					<span class="edit-btn fa fa-pencil"></span>
+					<span class="fa fa-trash"></span>
+				</div>
+			</div>
+			</li>
+		<!--  -->
+		<!--  -->
+			<li class="event-card">
+				<div class="event-content clearselect">
+					<h2>Febuary 24, 2017</h2>
+					<h3>Assignment 1 due</h3>
+					
+					<p>MC 2066</p>
+				</div>
+				<div class="event-operation clearselect">
+					<span class="fa fa-pencil"></span>
+					<span class="fa fa-trash"></span>
+				</div>
+			</li>
+		<!--  -->
+		<!--  -->
+			<li class="event-card">
+				<div class="event-content clearselect">
+					<h2>Febuary 24, 2017</h2>
+					<h3>Assignment 1 due</h3>
+					
+					<p>MC 2066</p>
+				</div>
+				<div class="event-operation clearselect">
+					<span class="fa fa-pencil"></span>
+					<span class="fa fa-trash"></span>
+				</div>
+			</li>
+		<!--  -->
+		<!--  -->
+			<li class="event-card">
+				<div class="event-content clearselect">
+					<h2>Febuary 24, 2017</h2>
+					<h3>Assignment 1 due</h3>
+					
+					<p>MC 2066</p>
+				</div>
+				<div class="event-operation clearselect">
+					<span class="fa fa-pencil"></span>
+					<span class="fa fa-trash"></span>
+				</div>
+			</li>
+<!--  -->
+		</ul>
+		<div class="scrollbar_2 clearselect">
+					<span class="scroll_2"></span>
+				</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./js/scrollBar.js"></script>
+<script type="text/javascript" src='./js/animate.js'></script>
+<script type="text/javascript" src='./js/submit_form.js'></script>
+<script type="text/javascript">
+	$(window).ready(function () {
+		var hight = $(window).height() - 110;
+		//console.log(hight);
+		$('.event-cards-wrapper').height(hight);
+		$('.cards-list').height(hight);
+
+		// Initialize Sliders
+		var o_scrollbar = new Scrollbar({
+				slide_bar : '.scrollbar_1',
+				slider : '.scroll_1',
+				content : '.slide-content'
+			});
+		var o_scrollbar2 = new Scrollbar2({
+				slide_bar : '.scrollbar_2',
+				slider : '.scroll_2',
+				content : '.cards-list'
+			});
+	});
+
+	$(window).resize(function (argument) {
+		var o_scrollbar = new Scrollbar({
+				slide_bar : '.scrollbar_1',
+				slider : '.scroll_1',
+				content : '.slide-content'
+			});
+		var o_scrollbar2 = new Scrollbar2({
+				slide_bar : '.scrollbar_2',
+				slider : '.scroll_2',
+				content : '.cards-list'
+			});
+	});
+</script>
+
+</body>
+</html>
